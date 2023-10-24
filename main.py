@@ -7,7 +7,7 @@ from discord.ext import commands
 
 intents = discord.Intents.default()
 intents.message_content = True
-bot = commands.Bot(command_prefix='!', intents=intents)
+client = discord.Client(intents=intents)
 
 
 
@@ -22,4 +22,4 @@ if ("①｜"and "⑤｜"and "⑥｜" in message.content):
         await member.add_roles(role)
 
 
-bot.run(os.environ["DISCORD_TOKEN"])
+clieant.run(os.environ["DISCORD_TOKEN"])
