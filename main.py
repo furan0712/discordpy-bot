@@ -12,6 +12,8 @@ client = discord.Client(intents=intents)
 
 @client.event
 async def on_message(message)
+if message.author == client.user:
+        return
 if ("①｜"and "⑤｜"and "⑥｜" in message.content):
         verify_channel = 1084418616386142258
         if message.channel.id != verify_channel:
