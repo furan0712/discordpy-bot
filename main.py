@@ -10,7 +10,7 @@ intents.message_content = True
 client = discord.Client(intents=intents)
 
 
-
+async def on_message()
 if ("①｜"and "⑤｜"and "⑥｜" in message.content):
         verify_channel = 1084418616386142258
         if message.channel.id != verify_channel:
@@ -20,6 +20,7 @@ if ("①｜"and "⑤｜"and "⑥｜" in message.content):
         member = message.author
         role = member.guild.get_role(role_verify)
         await member.add_roles(role)
+        
 
 
 clieant.run(os.environ["DISCORD_TOKEN"])
