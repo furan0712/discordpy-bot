@@ -10,17 +10,16 @@ intents.message_content = True
 bot = commands.Bot(command_prefix='!', intents=intents)
 
 
-@bot.event
-async def on_ready():
-    print(f"Logged in as {bot.user}")
 
-@bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
-
-@bot.command()
-async def hello(ctx):
-    await ctx.send("Choo choo! 🚅")
+if ("①｜"and "⑤｜"and "⑥｜" in message.content):
+        verify_channel = 1084418616386142258
+        if message.channel.id != verify_channel:
+            return
+        role_verify = 1034398254189793300
+        guild = client.get_guild
+        member = message.author
+        role = member.guild.get_role(role_verify)
+        await member.add_roles(role)
 
 
 bot.run(os.environ["DISCORD_TOKEN"])
