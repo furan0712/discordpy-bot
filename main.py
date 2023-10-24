@@ -9,7 +9,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
 
-
+Client.event
 async def on_message()
 if ("①｜"and "⑤｜"and "⑥｜" in message.content):
         verify_channel = 1084418616386142258
